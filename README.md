@@ -28,10 +28,10 @@ The method consists of the following steps:
 
 ## Prototype Features
 The demo iOS and macOS hybrid app should at least contain the following features:
-* GPS usage
-* Network usage (e.g. call an API)
-* Eventually use of the camera
-* At least one more sensor that is available on macOS and iOS
-* At least one sensor that is only available on iOS  
+	* GPS usage
+	* Network usage (e.g. call an API)
+	* Eventually use of the camera
+	* At least one more sensor that is available on macOS and iOS
+	* At least one sensor that is only available on iOS  
 
 => If it is possible to use native iOS code, the base for the prototype could be the WeatherApp written in NaMoApps
