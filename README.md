@@ -35,3 +35,7 @@ The demo iOS and macOS hybrid app should at least contain the following features
 * At least one sensor that is only available on iOS  
 
 => If it is possible to use native iOS code, the base for the prototype could be the WeatherApp written in NaMoApps
+
+## The Solution
+1. Methods
+	* The outcome of methods step 1 from above can be found in the documentation of [methods](methods/methods.md)
