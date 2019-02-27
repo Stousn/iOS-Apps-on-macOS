@@ -1,4 +1,5 @@
 # Methods
+[Back to ReadMe](./../README.md)
 ## The Idea
 The main points are to reuse existing work and to reuse as much source code as possible for mobile and desktop platform. Therefore, a web search is the most fitting research method. Another goal should be that on both platforms an native application should be possible.
 
@@ -39,3 +40,5 @@ The main points are to reuse existing work and to reuse as much source code as p
     * Native cross platform implementation by Apple itself
     * Code can be written in Swift and both applications can directly be built with Xcode
     * Probably the best way, but the developers preview (which is set for early 2019) is still not released.
+    
+[Back to ReadMe](./../README.md)
