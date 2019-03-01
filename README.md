@@ -39,3 +39,21 @@ The demo iOS and macOS hybrid app should at least contain the following features
 ## The Solution
 1. Methods
 	* The outcome of methods step 1 from above can be found in the documentation of [methods](methods/methods.md)
+
+
+## Memo to self:
+* Ionic
+	* `xPlatformIosDemoApp/app/` is the dist folder
+	* `xPlatformIosDemoApp/src/app` is the source code.
+	* build and serve with `ionic serve` in xPlatformIosDemoApp
+* Electron 
+	* `electron/angular-electron/dist` is the dist folder
+	* `electron/angular-electron/src/app` is the source code.
+	* build with `ng build --prod` in `angular-electron`
+	* serve with `npm serve` in `angular-electron`
+* Problems
+	* Angular Versions
+		* Angular7 in Electron
+		* Angular5 in Ionic
+		* Solution
+			* Try to raise version in Ionic to 7
