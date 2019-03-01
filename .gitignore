@@ -67,3 +67,10 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 methods/.vscode/settings.json
+
+# this project
+
+node_modules
+
+# ionic
+ionic/xPlatformIosDemoApp/src/app
