@@ -73,8 +73,8 @@ methods/.vscode/settings.json
 node_modules
 
 # ionic
-ionic/xPlatformIosDemoApp/src/app
+ionic/xPlatformIosDemoApp/src/app/app*
 
 # electron
 dist
-electron/angular-electron/src/app
+electron/angular-electron/src/app/app*
