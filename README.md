@@ -52,8 +52,9 @@ The demo iOS and macOS hybrid app should at least contain the following features
 	* build with `ng build --prod` in `angular-electron`
 	* serve with `npm start` in `angular-electron`
 * Problems
-	* Angular Versions
+	* ~~Angular Versions~~
 		* Angular7 in Electron
 		* Angular5 in Ionic
 		* Solution
 			* Try to raise version in Ionic to 7
+	* New Version of `RxJS` with old code
