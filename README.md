@@ -41,7 +41,9 @@ The demo iOS and macOS hybrid app should at least contain the following features
 	* The outcome of methods step 1 from above can be found in the documentation of [methods](methods/methods.md)
 
 
-## Memo to self:
+## Start-Up
+* Web-App
+	* Copy `webapp/merged/*` into desired source code folder of ionic or Electron
 * Ionic
 	* `xPlatformIosDemoApp/app/` is the dist folder
 	* `xPlatformIosDemoApp/src/app` is the source code.
@@ -51,10 +53,13 @@ The demo iOS and macOS hybrid app should at least contain the following features
 	* `electron/angular-electron/src/app` is the source code.
 	* build with `ng build --prod` in `angular-electron`
 	* serve with `npm start` in `angular-electron`
-* Problems
-	* ~~Angular Versions~~
-		* Angular7 in Electron
-		* Angular5 in Ionic
-		* Solution
-			* Try to raise version in Ionic to 7
-	* New Version of `RxJS` with old code
+
+## Solutions (and Problems)
+* ~~Angular Versions~~
+	* Angular7 in Electron
+	* Angular5 in Ionic
+	* Solution
+		* Raise version in Ionic to 7
+* New Version of `RxJS` with old code
+	* Solution
+		* `ionic serve` and fix import errors (shown in terminal and browser on `localhost:8100`)
