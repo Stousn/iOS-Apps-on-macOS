@@ -50,7 +50,7 @@ The demo iOS and macOS hybrid app should at least contain the following features
 	* `electron/angular-electron/dist` is the dist folder
 	* `electron/angular-electron/src/app` is the source code.
 	* build with `ng build --prod` in `angular-electron`
-	* serve with `npm serve` in `angular-electron`
+	* serve with `npm start` in `angular-electron`
 * Problems
 	* Angular Versions
 		* Angular7 in Electron
