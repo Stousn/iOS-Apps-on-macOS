@@ -5,7 +5,7 @@ __Study:__ IT&Mobile Security (Master) - FH JOANNEUM Kapfenberg
 __Course:__ Project Work
 
 ## Problem
-Apple has it's own ecosystem. It's clearly seperated form other platforms which is due to the fact that Apple provides software and hardware. Nevertheless, Apple develops different operating systems for different purposes. For desktop and laptop pcs there is macOS, iOS is a mobile operatings system for smartphone and tablet and then there are tvOS for Apple TV and watchOS for smartwatch. For obvious reasons watchOS and iOS are very tight coupled and Apple watch apps are actually just a part of an iOS application. For desktop software it is different. Tough, some apps developed by Apple itself - like Safari - already make it possible to hand over the state between iOS and macOS it still is a completly different aritecture. Until now it is not possible to run exactly the same iOS app on macOS.
+Apple has it's own ecosystem. It's clearly separated form other platforms which is due to the fact that Apple provides software and hardware. Nevertheless, Apple develops different operating systems for different purposes. For desktop and laptop pcs there is macOS, iOS is a mobile operating system for smartphone and tablet and then there are tvOS for Apple TV and watchOS for smartwatch. For obvious reasons watchOS and iOS are very tight coupled and Apple watch apps are actually just a part of an iOS application. For desktop software it is different. Tough, some apps developed by Apple itself - like Safari - already make it possible to hand over the state between iOS and macOS it still is a completely different architecture. Until now it is not possible to run exactly the same iOS app on macOS.
 
 ## Ideas
 The main idea of this project work is it to run an iOS app on desktop using the least expensive (regarding time and effort for developers) way. The reusability of the majority source code should be given.
@@ -19,11 +19,11 @@ The method consists of the following steps:
 	* iOS simulators for macOS
 	* macOS Mojave feature presented on WWDC18 (Marzipan)
 2. Choose one method paying attention to the criteria below
-	* Efford for developers
-	* Supplementary source code for each plattform
+	* Effort for developers
+	* Supplementary source code for each platform
 	* Minimal code duplication (maximum code reusage)
 	* ...
-3. Development of one demo application (prototype) using the method choosen in 2.
+3. Development of one demo application (prototype) using the method chosen in 2.
 	* Features see below
 
 ## Prototype Features
