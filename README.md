@@ -61,5 +61,7 @@ The demo iOS and macOS hybrid app should at least contain the following features
 	* Solution
 		* Raise version in Ionic to 7
 * New Version of `RxJS` with old code
-	* Solution
+	* Possible solutions
 		* `ionic serve` and fix import errors (shown in terminal and browser on `localhost:8100`)
+		* lower RxJS version for ionic only (see if it still works)
+		* lower RxJS versions for both and downgrade Electrons code
