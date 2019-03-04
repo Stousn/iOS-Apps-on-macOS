@@ -40,8 +40,23 @@ The demo iOS and macOS hybrid app should at least contain the following features
 1. Methods
 	* The outcome of methods step 1 from above can be found in the documentation of [methods](methods/methods.md)
 
+## Requirements
+* node / npm
+* git bash (on older Windows versions in order to run .sh scripts)
 
 ## Start-Up
+* In order to automate copying webapp files and build the app, scripts are provided.
+  * `install_all.sh`
+    * Installs dependencies from node package manager
+  * `start_electron.sh`
+    * copies webapp files in the src folder of electron
+    * builds the Angular app
+    * starts electron in a new window
+  * `start_ionic.sh`
+    * copies webapp files in the src folder of ionic
+    * build and serves ionic in a new browser tab
+
+## Folder Info
 * Web-App
 	* Copy `webapp/merged/*` into desired source code folder of ionic or Electron
 * Ionic
