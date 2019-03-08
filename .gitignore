@@ -82,9 +82,12 @@ node_modules
 # ionic
 ionic/xPlatformIosDemoApp/src/app/app.*
 ionic/xPlatformIosDemoApp/src/app/app-routing.*
+ionic/xPlatformIosDemoApp/src/app/tab*
 
 # electron
 dist
 electron/angular-electron/src/app/app.*
 electron/angular-electron/src/app/app-routing.*
+electron/angular-electron/src/app/tab*
+
 
