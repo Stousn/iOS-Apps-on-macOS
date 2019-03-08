@@ -68,6 +68,13 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 methods/.vscode/settings.json
 
+# MAC
+.DS_Store
+*/.DS_Store
+
+# Code
+.vscode
+
 # this project
 
 node_modules
