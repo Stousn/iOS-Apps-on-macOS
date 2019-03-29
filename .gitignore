@@ -90,4 +90,5 @@ electron/angular-electron/src/app/app.*
 electron/angular-electron/src/app/app-routing.*
 electron/angular-electron/src/app/tab*
 
-
+# ionic_electron
+ionic_electron/xPlatformIosDemoApp/www/
