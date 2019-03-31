@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WeatherService, RootObject } from '../services/weather.service';
+import { WeatherService, RootObject } from '../services/weather/weather.service';
 
 @Component({
   selector: 'app-tab1',
@@ -25,10 +25,18 @@ export class Tab1Page {
 
   private init() {
     
-    this.weatherService.getWeather()
-    .subscribe(data => {
-      this.weatherData = <RootObject>data
-      console.log(data)
+    // this.weatherService.getWeather()
+    // .subscribe(data => {
+    //   this.weatherData = <RootObject>data
+    //   console.log(data)
+    // })
+
+    this.weatherService.getWeatherForLocation()
+    .then(observable => {
+      observable.subscribe(data => {
+        this.weatherData = <RootObject>data
+        console.log(data)
+      })
     })
 
     
