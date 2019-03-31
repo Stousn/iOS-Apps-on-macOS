@@ -11,6 +11,8 @@ export class WeatherService {
 
   private WEATHER_API_URI: string = "http://api.openweathermap.org/data/2.5/weather?"
 
+  private ICON_API_URI: string = "http://openweathermap.org/img/w/"
+
   private API_KEY: string = "APPID=3ae7d7caf4a4e14a912fafcea3d68014"
 
   private WEATHER_API_UNIT: string = "units=metric"
@@ -35,6 +37,10 @@ export class WeatherService {
       let url = this.WEATHER_API_URI + lat + lon + "&" + this.API_KEY + "&" + this.WEATHER_API_UNIT
       return this.http.get(url)
     })
+  }
+
+  getWeatherIconUrl(icon: string) {
+    return this.ICON_API_URI + icon + ".png"
   }
 
 }

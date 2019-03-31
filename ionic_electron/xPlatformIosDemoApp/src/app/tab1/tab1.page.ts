@@ -15,7 +15,9 @@ export class Tab1Page {
 
   weatherData:RootObject
 
-  weatherService
+  weatherService:any
+
+  imgURL:string
 
   constructor(weatherService: WeatherService) {
     this.weatherService = weatherService
@@ -23,7 +25,7 @@ export class Tab1Page {
     this.init()
   }
 
-  private init() {
+  private async init() {
     
     // this.weatherService.getWeather()
     // .subscribe(data => {
@@ -36,15 +38,13 @@ export class Tab1Page {
       observable.subscribe(data => {
         this.weatherData = <RootObject>data
         console.log(data)
+
+        this.imgURL = this.weatherService.getWeatherIconUrl(this.weatherData.weather[0].icon)
       })
     })
 
     
 
-  }
-
-  private updateWeatherData(weather: JSON) {
-    //this.degrees = weather.main.temp
   }
 
 }

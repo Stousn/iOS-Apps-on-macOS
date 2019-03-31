@@ -10,7 +10,7 @@
   <ion-grid>
     <ion-row>
       <ion-col class="ion-text-center">
-        Weather IMG
+        <img *ngIf="imgURL" [src]="imgURL">
       </ion-col>
       <ion-col class="ion-text-center">
         {{weatherData.main.temp}} °C
