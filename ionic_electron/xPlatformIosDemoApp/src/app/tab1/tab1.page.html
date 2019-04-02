@@ -13,30 +13,30 @@
         <img *ngIf="imgURL" [src]="imgURL">
       </ion-col>
       <ion-col class="ion-text-center">
-        {{weatherData.main.temp}} °C
+        <h1>{{weatherData.main.temp}} °C</h1>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col class="ion-text-right">
-        {{weatherData.name}}
+        <h3 class="ion-text-middle">{{weatherData.name}}</h3>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col class="ion-text-right">
-        {{weatherData.weather[0].main}}
+        <h2>{{weatherData.weather[0].main}}</h2> 
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
               Clouds
             </ion-col>
-            <ion-col>
+            <ion-col class="ion-text-right"> 
               {{weatherData.clouds.all}} %
             </ion-col>
           </ion-row>
@@ -44,11 +44,11 @@
       </ion-col>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
               Wind
             </ion-col>
-            <ion-col>
+            <ion-col class="ion-text-right">
               {{weatherData.wind.speed}} m/s {{weatherData.wind.deg}}°
             </ion-col>
           </ion-row>
@@ -59,11 +59,11 @@
     <ion-row>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
               Rain
             </ion-col>
-            <ion-col>
+            <ion-col class="ion-text-right">
               {{weatherData.rain || 0}} mm
             </ion-col>
           </ion-row>
@@ -71,11 +71,11 @@
       </ion-col>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
               Humidity
             </ion-col>
-            <ion-col>
+            <ion-col class="ion-text-right">
               {{weatherData.main.humidity}} %
             </ion-col>
           </ion-row>
@@ -86,11 +86,11 @@
     <ion-row>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
               Pressure
             </ion-col>
-            <ion-col>
+            <ion-col class="ion-text-right">
               {{weatherData.main.pressure}} hPa
             </ion-col>
           </ion-row>
@@ -98,11 +98,11 @@
       </ion-col>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
               Max / Min
             </ion-col>
-            <ion-col>
+            <ion-col class="ion-text-right">
               {{weatherData.main.temp_max}} / {{weatherData.main.temp_min}} °C
             </ion-col>
           </ion-row>

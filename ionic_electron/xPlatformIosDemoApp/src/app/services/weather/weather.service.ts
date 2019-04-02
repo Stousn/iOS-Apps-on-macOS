@@ -39,6 +39,11 @@ export class WeatherService {
     })
   }
 
+  getWeatherForSearch(location: string) {
+    let url = this.WEATHER_API_URI + "q="+ location + "&" + this.API_KEY + "&" + this.WEATHER_API_UNIT
+    return this.http.get(url)
+  }
+
   getWeatherIconUrl(icon: string) {
     return this.ICON_API_URI + icon + ".png"
   }
