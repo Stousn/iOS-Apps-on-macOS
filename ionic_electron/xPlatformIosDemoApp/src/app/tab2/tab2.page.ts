@@ -20,27 +20,24 @@ export class Tab2Page {
 
   errorMsg: string
 
+  searchActive: boolean
+
   constructor(weatherService: WeatherService, public alertController: AlertController) {
     this.weatherService = weatherService
 
-    // this.init()
+    this.init()
   }
 
   private async init() {
 
-    this.weatherService.getWeatherForLocation()
-      .then(observable => {
-        observable.subscribe(data => {
-          this.weatherData = <RootObject>data
-          console.log(data)
-
-          this.imgURL = this.weatherService.getWeatherIconUrl(this.weatherData.weather[0].icon)
-        })
-      })
-    }
+    
+    
+  }
 
     search = function(event) {
       console.log(this.searchText)
+
+      this.searchActive = true;
 
       this.weatherService.getWeatherForSearch(this.searchText)
       .subscribe(data => {
@@ -50,6 +47,7 @@ export class Tab2Page {
           this.imgURL = this.weatherService.getWeatherIconUrl(this.weatherData.weather[0].icon)
         }, error => {
           console.log(error.error.message)
+          this.searchActive = false
           this.presentPrompt(error.error.message + ". Please try again!")
         })
     }
@@ -58,12 +56,12 @@ export class Tab2Page {
     let alert = await this.alertController.create({
       header: 'Search error',
       message: message,
-      buttons: [
-        {
+      buttons: [{
           text: 'Ok'
-        }
-      ]
+        }]
     });
     await alert.present();
+    this.searchText = null;
   }
+  
 }

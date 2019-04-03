@@ -114,8 +114,9 @@
           </ion-grid>
         </ion-col>
       </ion-row>
-  
-  
-  
     </ion-grid>
+  </ion-content>
+
+  <ion-content *ngIf="!weatherData && searchActive" class="ion-text-center">
+    <ion-spinner></ion-spinner>
   </ion-content>
