@@ -24,13 +24,13 @@ export class Tab1Page {
 
   constructor(weatherService: WeatherService, public loadingController: LoadingController) {
     this.weatherService = weatherService
-    this.presentLoading()
-    .then(res => {
-      this.isLoaderOpen = true;
-      if(this.weatherData) {
-        this.loadingController.dismiss()
-      }
-    })
+    // this.presentLoading()
+    // .then(res => {
+    //   this.isLoaderOpen = true;
+    //   if(this.weatherData) {
+    //     this.loadingController.dismiss()
+    //   }
+    // })
 
     this.init()
   }
@@ -49,24 +49,24 @@ export class Tab1Page {
       observable.subscribe(data => {
         this.weatherData = <RootObject>data
         console.log(data)
-        if (this.isLoaderOpen) {
-          this.loadingController.dismiss()
-        }
-        this.loadingController.dismiss()
+        // if (this.isLoaderOpen) {
+        //   this.loadingController.dismiss()
+        // }
+        // this.loadingController.dismiss()
         this.imgURL = this.weatherService.getWeatherIconUrl(this.weatherData.weather[0].icon)
       })
     })
 
   }
 
-  async presentLoading() {
-    if (await !this.weatherData) {
-      const loadingElement = await this.loadingController.create({
-        message: 'Please wait...',
-        spinner: 'crescent'
-      });
-      return await loadingElement.present();
-    }
-  }
+  // async presentLoading() {
+  //   if (await !this.weatherData) {
+  //     const loadingElement = await this.loadingController.create({
+  //       message: 'Please wait...',
+  //       spinner: 'crescent'
+  //     });
+  //     return await loadingElement.present();
+  //   }
+  // }
 
 }

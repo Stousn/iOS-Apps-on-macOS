@@ -114,3 +114,7 @@
 
   </ion-grid>
 </ion-content>
+
+<ion-content *ngIf="!weatherData" class="ion-text-center ion-padding-top">
+  <ion-spinner></ion-spinner>
+</ion-content>
