@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="weatherData">
+<ion-content *ngIf="weatherData" class="theme">
   <ion-grid>
     <ion-row>
       <ion-col class="ion-text-center">
@@ -115,6 +115,6 @@
   </ion-grid>
 </ion-content>
 
-<ion-content *ngIf="!weatherData" class="ion-text-center ion-padding-top">
+<ion-content *ngIf="!weatherData" class="ion-text-center ion-padding-top theme">
   <ion-spinner></ion-spinner>
 </ion-content>
