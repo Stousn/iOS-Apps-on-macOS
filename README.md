@@ -30,9 +30,8 @@ The method consists of the following steps:
 The demo iOS and macOS hybrid app should at least contain the following features:
 * GPS usage
 * Network usage (e.g. call an API)
-* Eventually use of the camera
 * At least one more sensor that is available on macOS and iOS
-* At least one sensor that is only available on iOS  
+* At least one sensor that is only available on iOS (changed: feature that is available on macOS)
 
 => If it is possible to use native iOS code, the base for the prototype could be the WeatherApp written in NaMoApps
 
@@ -45,29 +44,30 @@ The demo iOS and macOS hybrid app should at least contain the following features
 * git bash (on older Windows versions in order to run .sh scripts)
 
 ## Start-Up
-* In order to automate copying webapp files and build the app, scripts are provided.
+* In order to automate runing the following scripts are provided
   * `install_all.sh`
-    * Installs dependencies from node package manager
+    * Installs dependencies from node package manager (ionic, electron, angular, ...)
   * `start_electron.sh`
-    * copies webapp files in the src folder of electron
     * builds the Angular app
+    * runs Angular application on local webserver
     * starts electron in a new window
   * `start_ionic.sh`
-    * copies webapp files in the src folder of ionic
-    * build and serves ionic in a new browser tab
+    * builds the Angular app
+    * runs Angular application on local webserver
+    * starts ionic app in a new browser tab (if not automatically: use http://localhost:4200 as URL)
 
 ## Folder Info
-* Web-App
-	* In  `webapp/merged/` the merged source code filed for ionic and Electron are located
-* Ionic
-	* `xPlatformIosDemoApp/app/` is the dist folder
-	* `xPlatformIosDemoApp/src/app/` is the source code folder of the webapp
-	* build and serve with `ionic serve` in xPlatformIosDemoApp
+* Angular
+	* `ionic_electron/xPlatformIosDemoApp/www/` is the dist folder
+	* `ionic_electron/xPlatformIosDemoApp/src/app` is the source code folder of the webapp
+	* build with `ng build --prod` in xPlatformIosDemoApp
+* Ionic 
+	* start local webserver with `npm start` in `ionic_electron/xPlatformIosDemoApp/`
+	* open http://localhost:4200 in browser window 
 * Electron 
-	* `electron/angular-electron/dist` is the dist folder
-	* `electron/angular-electron/src/app` is the source code folder of the webapp
-	* build with `ng build --prod` in `angular-electron`
-	* serve with `npm start` in `angular-electron`
+	* `ionic_electron/xPlatformIosDemoApp/main.js` is the startup file
+	* start local webserver with `npm start` in `ionic_electron/xPlatformIosDemoApp/`
+	* start window with `npm run electron` in `ionic_electron/xPlatformIosDemoApp/` in a second terminal
 
 ## Solutions (and Problems)
 * ~~Angular Versions~~
@@ -75,8 +75,11 @@ The demo iOS and macOS hybrid app should at least contain the following features
 	* Angular5 in Ionic
 	* Solution
 		* Raise version in Ionic to 7
-* New Version of `RxJS` with old code
+* ~~New Version of `RxJS` with old code~~
 	* Possible solutions
-		* `ionic serve` and fix import errors (shown in terminal and browser on `localhost:8100`)
+		* ~~`ionic serve` and fix import errors (shown in terminal and browser on `localhost:8100`)~~
 		* lower RxJS version for ionic only (see if it still works)
-		* lower RxJS versions for both and downgrade Electrons code
+		* ~~lower RxJS versions for both and downgrade Electrons code~~
+* ~~White screen in Electron window~~
+	* Problem: path used - security block
+	* Solution: Run webserver locally and use url instead of path
