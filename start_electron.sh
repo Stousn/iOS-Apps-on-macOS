@@ -2,21 +2,22 @@
 
 echo "STARTING ELECTRON"
 
-echo "reload webapp code"
-cd electron/angular-electron/src/app/
-rm app*
-rm -rf tab*
-cp ../../../../webapp/merged/app* ./
-cp -R ../../../../webapp/merged/tab* ./
-
 echo "
 build Angular"
-cd ../../
+cd ionic_electron/xPlatformIosDemoApp
 ng build --prod
 
 echo "
+run webserver"
+npm start &
+
+sleep 30
+
+echo "
 starting electron window"
-npm start 
+npm run electron 
+
+kill $!
 
 cd ../../
 echo "
