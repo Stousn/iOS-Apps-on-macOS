@@ -1,15 +1,12 @@
 #!/bin/bash
 
 echo "Install dependencies for electron"
-cd electron/angular-electron
+cd ionic_electron/xPlatformIosDemoApp
 npm install
 
-echo "
-Install dependencies for ionic"
-cd ../../ionic/xPlatformIosDemoApp
-npm install
+npm install -g electron
 
-cd ../../
+npm install -g @angular/cli
 
 echo "
 DONE.

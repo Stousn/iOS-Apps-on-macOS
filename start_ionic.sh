@@ -2,17 +2,9 @@
 
 echo "STARTING IONIC"
 
-echo "reload webapp code"
-cd ionic/xPlatformIosDemoApp/src/app/
-rm app*
-rm -rf tab*
-cp ../../../../webapp/merged/app* ./
-cp -R ../../../../webapp/merged/tab* ./
-
-
 echo "
 build Angular"
-cd ../../
+cd ionic_electron/xPlatformIosDemoApp
 ng build --prod
 
 echo "
