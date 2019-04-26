@@ -6,50 +6,50 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="weatherData" class="theme">
   <ion-grid>
     <ion-row>
       <ion-col class="ion-text-center">
-        Weather IMG
+        <img *ngIf="imgURL" [src]="imgURL">
       </ion-col>
       <ion-col class="ion-text-center">
-        Degrees
+        <h1>{{weatherData.main.temp}} °C</h1>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col class="ion-text-right">
-        Location
+        <h3 class="ion-text-middle">{{weatherData.name}}</h3>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col class="ion-text-right">
-        Condition
+        <h2>{{weatherData.weather[0].main}}</h2> 
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
-              Key
+              Clouds
             </ion-col>
-            <ion-col>
-              Value
+            <ion-col class="ion-text-right"> 
+              {{weatherData.clouds.all}} %
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-col>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
-              Key
+              Wind
             </ion-col>
-            <ion-col>
-              Value
+            <ion-col class="ion-text-right">
+              {{weatherData.wind.speed}} m/s {{weatherData.wind.deg}}°
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -59,24 +59,51 @@
     <ion-row>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
-              Key
+              Rain
             </ion-col>
-            <ion-col>
-              Value
+            <ion-col class="ion-text-right">
+              {{weatherData.rain || 0}} mm
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-col>
       <ion-col size="12" size-sm>
         <ion-grid>
-          <ion-row>
+          <ion-row class="ion-grey">
             <ion-col>
-              Key
+              Humidity
             </ion-col>
+            <ion-col class="ion-text-right">
+              {{weatherData.main.humidity}} %
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" size-sm>
+        <ion-grid>
+          <ion-row class="ion-grey">
             <ion-col>
-              Value
+              Pressure
+            </ion-col>
+            <ion-col class="ion-text-right">
+              {{weatherData.main.pressure}} hPa
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col size="12" size-sm>
+        <ion-grid>
+          <ion-row class="ion-grey">
+            <ion-col>
+              Max / Min
+            </ion-col>
+            <ion-col class="ion-text-right">
+              {{weatherData.main.temp_max}} / {{weatherData.main.temp_min}} °C
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -86,4 +113,8 @@
 
 
   </ion-grid>
+</ion-content>
+
+<ion-content *ngIf="!weatherData" class="ion-text-center ion-padding-top theme">
+  <ion-spinner></ion-spinner>
 </ion-content>
