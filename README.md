@@ -40,7 +40,7 @@ The demo iOS and macOS hybrid app should at least contain the following features
 	* The outcome of methods step 1 from above can be found in the documentation of [methods](methods/methods.md)
 
 ## Requirements
-* node / npm
+* node / npm (Version 10.X.X)
 * git bash (on older Windows versions in order to run .sh scripts)
 
 ## Start-Up
@@ -83,3 +83,7 @@ The demo iOS and macOS hybrid app should at least contain the following features
 * ~~White screen in Electron window~~
 	* Problem: path used - security block
 	* Solution: Run webserver locally and use url instead of path
+* ~~Node Version update~~
+	* Problem: build failed after node update to version 12.X.X
+	* Solution: use version 10.X.X of node. 
+		* Hint: If multiple versions are required on one machine: search for nvm (node version manager)
