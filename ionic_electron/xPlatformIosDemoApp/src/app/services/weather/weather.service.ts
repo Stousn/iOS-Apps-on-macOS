@@ -36,6 +36,8 @@ export class WeatherService {
 
       let url = this.WEATHER_API_URI + lat + lon + "&" + this.API_KEY + "&" + this.WEATHER_API_UNIT
       return this.http.get(url)
+    }).catch(err => {
+      return err
     })
   }
 

@@ -68,8 +68,11 @@
               <ion-col>
                 Rain
               </ion-col>
-              <ion-col class="ion-text-right">
-                {{weatherData.rain || 0}} mm
+              <ion-col class="ion-text-right" *ngIf="weatherData.rain">
+                {{weatherData.rain['1h'] || 0}} mm
+              </ion-col>
+              <ion-col class="ion-text-right" *ngIf="!weatherData.rain">
+                0 mm
               </ion-col>
             </ion-row>
           </ion-grid>

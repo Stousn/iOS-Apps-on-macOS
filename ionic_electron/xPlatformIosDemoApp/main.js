@@ -1,6 +1,9 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
 
+
+process.env.GOOGLE_API_KEY = 'AIzaSyBdy5wizkijzq1MaCf_kkd56d19tTh-KLE'
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow

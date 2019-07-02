@@ -37,7 +37,9 @@ export class Tab2Page {
     search = function(event) {
       console.log(this.searchText)
 
-      this.searchActive = true;
+      this.searchActive = true
+
+      this.eatherData = null
 
       this.weatherService.getWeatherForSearch(this.searchText)
       .subscribe(data => {

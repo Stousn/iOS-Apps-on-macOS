@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WeatherService, RootObject } from '../services/weather/weather.service';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -22,7 +22,10 @@ export class Tab1Page {
 
   isLoaderOpen:boolean
 
-  constructor(weatherService: WeatherService, public loadingController: LoadingController) {
+  error = false
+
+  constructor(weatherService: WeatherService, public loadingController: LoadingController,
+    public alertController: AlertController) {
     this.weatherService = weatherService
     // this.presentLoading()
     // .then(res => {
@@ -55,18 +58,22 @@ export class Tab1Page {
         // this.loadingController.dismiss()
         this.imgURL = this.weatherService.getWeatherIconUrl(this.weatherData.weather[0].icon)
       })
+    }).catch(err => {
+      this.error = true
+      this.presentPrompt("We are unable to locate your device. Please use the search tab and search manually.")
     })
 
   }
 
-  // async presentLoading() {
-  //   if (await !this.weatherData) {
-  //     const loadingElement = await this.loadingController.create({
-  //       message: 'Please wait...',
-  //       spinner: 'crescent'
-  //     });
-  //     return await loadingElement.present();
-  //   }
-  // }
+  async presentPrompt(message: string) {
+    let alert = await this.alertController.create({
+      header: 'Location error',
+      message: message,
+      buttons: [{
+        text: 'Ok'
+      }]
+    });
+    await alert.present()
+  }
 
 }
