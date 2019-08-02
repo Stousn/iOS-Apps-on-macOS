@@ -38,6 +38,8 @@ The demo iOS and macOS hybrid app should at least contain the following features
 ## The Solution
 1. Methods
 	* The outcome of methods step 1 from above can be found in the documentation of [methods](methods/methods.md)
+2. Impement an example with Ionic/Electron
+3. ~~Compare with Project Catalyst~~
 
 ## Requirements
 * node / npm (Version 10.X.X)
