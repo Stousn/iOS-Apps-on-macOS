@@ -11,7 +11,7 @@ import { StorageService } from './services/storage/storage.service';
 })
 export class AppComponent {
 
-  private DARK_SCHEME: string = '(prefers-color-scheme: dark)'
+  private DARK_SCHEME = '(prefers-color-scheme: dark)'
 
   constructor(
     private platform: Platform,
@@ -29,8 +29,8 @@ export class AppComponent {
       this.splashScreen.hide();
     });
 
-    this.storageService.load(this.storageService.THEME)
-      .then(theme => {
+    /** detect saved theme */
+    this.storageService.load(this.storageService.THEME).then(theme => {
         console.log(theme)
         if (undefined === theme || null === theme) {
           this.detectColorScheme()
@@ -40,6 +40,7 @@ export class AppComponent {
       })
   }
 
+  /** detects default color scheme */
   private detectColorScheme() {
     if (!window.matchMedia) {
       return;
@@ -50,6 +51,7 @@ export class AppComponent {
     }
   }
 
+  /** ui change for dark theme */
   setDarkTheme() {
       document.documentElement.style.setProperty('--ion-background-color', '#333')
       document.documentElement.style.setProperty('--ion-text-color', '#CCC')

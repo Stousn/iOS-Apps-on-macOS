@@ -2,7 +2,6 @@
 const { app, BrowserWindow } = require('electron')
 
 
-process.env.GOOGLE_API_KEY = 'AIzaSyBdy5wizkijzq1MaCf_kkd56d19tTh-KLE'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -14,11 +13,13 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            webSecurity: false
         }
     })
-
-    // process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
+    
+    process.env['GOOGLE_API_KEY'] = ''
+    process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 
 
 

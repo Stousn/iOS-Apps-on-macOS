@@ -63,8 +63,11 @@
             <ion-col>
               Rain
             </ion-col>
-            <ion-col class="ion-text-right">
+            <ion-col class="ion-text-right" *ngIf="weatherData.rain">
               {{weatherData.rain['1h'] || 0}} mm
+            </ion-col>
+            <ion-col class="ion-text-right" *ngIf="!weatherData.rain">
+              0 mm
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -125,6 +128,7 @@
     <ion-col class="ion-text-center">
       <h1>No location found.</h1>
       <p>Please search manually for your location</p>
+      <ion-button (click)="loadWeather()">retry</ion-button>
     </ion-col>
   </ion-row>
 </ion-grid>
