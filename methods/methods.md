@@ -41,4 +41,11 @@ The main points are to reuse existing work and to reuse as much source code as p
     * Code can be written in Swift and both applications can directly be built with Xcode
     * Probably the best way, ~~but the developers preview (which is set for early 2019) is still not released~~ but developers preview requires beta of macOS 10.15 Catalina (which is not recommended for a computer a person depends on).
     
+### Comparison of sufficient methods 
+The first mention of Marzipan at Apple's Keynote did not reveal many details. We learned more or less that Apple would provide us UiKit for macOS. Back then, we only had Apple internal Apps like Stocks that already used Marzipan. In the lates WWDC (2019), Apple presented Project Catalyst - which is the new name - to be within macOS 10.15 for everyone to use. Also, Twitter already ported its iOS (iPadOS) App to the Mac using Catalyst. From my point of view, this sounds very promising and should be - when available this fall - the best of the sufficient methods. 
+
+Combining Ionic and Electron is my choice for project work because it utilizes the web. HTML and CSS for the presentation of applications on desktop and mobile are not only comparably easy for the developer, but it also got widespread in the last years (e.g., Visual Studio Code, Slack, ÖBB, ...). The code of the app itself is more platform-independent with Ionic and Electron than Xojo or Project Catalyst, as it is providing platform-specific functionality and standard UI elements.
+
+Although it seems to be an interesting approach, I am not very fond of Xojo. The main reason for this is because it uses some BASIC dialect that is not very common - especially not for developers in the Apple universe or mobile development. Furthermore, the framework is from the nineties (like myself). Tough, I am interested in a comparison between Xojo and other frameworks for such cross-platform applications.
+    
 [Back to ReadMe](./../README.md)
