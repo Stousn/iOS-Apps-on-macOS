@@ -36,9 +36,9 @@ The main points are to reuse existing work and to reuse as much source code as p
     * Relatively old framework (from the '90ies)
     * It produces applications for iOS and macOS which can call the native API (Cocoa)
     * Xojo uses a proprietary object-oriented BASIC dialect 
-* [Marzipan](marzipan.md "Go to Marzipan")
+* [Project Catalyst (former Marzipan)](marzipan.md "Go to Marzipan")
     * Native cross platform implementation by Apple itself
     * Code can be written in Swift and both applications can directly be built with Xcode
-    * Probably the best way, but the developers preview (which is set for early 2019) is still not released.
+    * Probably the best way, ~~but the developers preview (which is set for early 2019) is still not released~~ but developers preview requires beta of macOS 10.15 Catalina (which is not recommended for a computer a person depends on).
     
 [Back to ReadMe](./../README.md)
