@@ -10,15 +10,15 @@ export class Tab3Page {
 
   darkmode: boolean
 
-  private DARK_SCHEME: string = '(prefers-color-scheme: dark)'
+  private DARK_SCHEME = '(prefers-color-scheme: dark)'
 
-  private LIGHT_SCHEME: string = '(prefers-color-scheme: light)'
+  private LIGHT_SCHEME = '(prefers-color-scheme: light)'
 
-  private DARK: string = 'dark'
+  private DARK = 'dark'
 
-  private LIGHT: string = 'light'
+  private LIGHT = 'light'
 
-  private storageService:any
+  private storageService: any
 
   constructor(storageService: StorageService) {
     this.storageService = storageService
@@ -46,7 +46,7 @@ export class Tab3Page {
     if (!window.matchMedia) {
       this.darkmode = false
       return
-    }    
+    }
     const mqDark = window.matchMedia(this.DARK_SCHEME)
     if (mqDark.matches) {
       this.darkmode = true
@@ -55,8 +55,9 @@ export class Tab3Page {
     }
   }
 
+  /** change ui if color toggle is clicked */
   colorShemeChanged() {
-    console.log("Darkmode:" + this.darkmode)
+    console.log('Darkmode:' + this.darkmode)
 
     if (this.darkmode) {
       document.documentElement.style.setProperty('--ion-background-color', '#333')
